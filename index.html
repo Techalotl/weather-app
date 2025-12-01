@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="top">
+        <div id="inputs">
+            <input type="search" name="city" id="city">
+            <button>SEARCH</button>
+        </div>
+        <div id="location"></div>
+    </div>
+    <div id="middle">
+        <div id="left-side">
+            <div class="card-info main">
+                <div class="card-info">
+                    <h2>CURRENT WEATHER</h2>
+                </div>
+                <div class="card-info">
+                    <img id="current-img" alt="icon of the current weather" width="50px">
+                </div>
+                <div class="card-info temperature">20 C</div>
+            </div>
+            <div class="card-info extras">
+                <div class="extra-info" id="min-temp"></div>
+                <div class="extra-info" id="max-temp"></div>
+                <div class="extra-info" id="humidity"></div>
+                <div class="extra-info" id="wind-speed"></div>
+                <div class="extra-info" id="uv"></div>
+            </div>
+        </div>
+        <div id="right-side">
+            <div id="sun-time">
+                <div id="sunrise">
+                    <h3>SUNRISE</h3>
+                    <img src="./assets/sunrise.svg" alt="sunrise icon" width="40px">
+                    <p id="sunrise-time"></p>
+                </div>
+                <div id="sunset">
+                    <h3>SUNSET</h3>
+                    <img src="./assets/sunset.svg" alt="sunset icon" width="40px">
+                    <p id="sunset-time"></p>
+                </div>
+            </div>
+            <div id="next-days">
+                <div id="tomorrow">
+                    <h3></h3>
+                    <img id="tomorrow-icon" width="40px">
+                </div>
+                <div id="after-tomorrow">
+                    <h3></h3>
+                    <img id="after-tomorrow-icon" width="40px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="next-hours">
+            <p id="hour1"></p>
+            <img alt="weather icon for the next hour" id="img-hour1" width="30px">
+        </div>
+        <div class="next-hours">
+            <p id="hour2"></p>
+            <img alt="weather icon for the next hour" id="img-hour2" width="30px">
+        </div>
+        <div class="next-hours">
+            <p id="hour3"></p>
+            <img alt="weather icon for the next hour" id="img-hour3" width="30px">
+        </div>
+        <div class="next-hours">
+            <p id="hour4"></p>
+            <img alt="weather icon for the next hour" id="img-hour4" width="30px">
+        </div>
+        <div class="next-hours">
+            <p id="hour5"></p>
+            <img alt="weather icon for the next hour" id="img-hour5" width="30px">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
