@@ -115,6 +115,8 @@ button:hover {
 
 #bottom {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .next-hours {
