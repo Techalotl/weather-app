@@ -123,5 +123,10 @@ button:hover {
     border: #85b143 solid 1px;
     padding: 10px;
     margin: 5px;
-    text-align: center;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
