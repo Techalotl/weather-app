@@ -17,7 +17,6 @@ body {
 }
 
 #top {
-    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -42,6 +41,10 @@ input {
     font-weight: bolder;
 }
 
+input::placeholder {
+    color: #85b14381;
+}
+
 button {
     padding: 5px;
     background-color: #010101;
@@ -60,7 +63,7 @@ button:hover {
 #location {
     color: #85c459;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: calc(1vw + 1vh + 1vmin);
 }
 
 #middle {
