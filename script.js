@@ -1,4 +1,5 @@
 const searchButton = document.querySelector('button');
+const tempSwitch = document.querySelector('input[type="checkbox"]');
 let city;
 
 (function setDays () {
@@ -117,8 +118,17 @@ searchButton.addEventListener('click', () => {
     if (searchInput.value === '') {
         return;
     }
-    getData(searchInput.value);
+    tempSwitch.checked ? getTempInF(searchInput.value) : getData(searchInput.value);
     searchInput.value = '';
+})
+
+tempSwitch.addEventListener('click', () => {
+    if (tempSwitch.checked) {
+        console.log('JOOOOO');
+        getTempInF(city);
+    } else {
+        getData(city);
+    }
 })
 
 getData();
