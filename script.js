@@ -88,4 +88,24 @@ async function getData(location = 'London') {
     }
 }
 
+function getTempInF(location, units = '°F') {
+    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=days%2Chours%2Ccurrent&key=3PA9H9QZZJQTPLF2FC4ZYDM6P&contentType=json`)
+    .then(function(response) {
+        if (!response.ok) {
+            alert('Something went wrong. Please try again.');
+            throw new Error(`Response status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(function(response){
+        setCurrentConditions(response, units);
+        setNextDaysConditions(response, units);
+        setHourlyConditions(response, units);
+        
+    })
+    .catch(function(error) {
+        console.log(error);
+    })
+}
+
 getData();
