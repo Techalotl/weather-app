@@ -124,7 +124,6 @@ searchButton.addEventListener('click', () => {
 
 tempSwitch.addEventListener('click', () => {
     if (tempSwitch.checked) {
-        console.log('JOOOOO');
         getTempInF(city);
     } else {
         getData(city);
