@@ -1,3 +1,6 @@
+const searchButton = document.querySelector('button');
+let city;
+
 (function setDays () {
     const today = new Date().getDay();
     const dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
@@ -83,6 +86,7 @@ async function getData(location = 'London') {
         setCurrentConditions(allData);
         setNextDaysConditions(allData);
         setHourlyConditions(allData);
+        city = allData.address;
     } catch (error) {
         console.log(error);
     }
@@ -101,11 +105,20 @@ function getTempInF(location, units = '°F') {
         setCurrentConditions(response, units);
         setNextDaysConditions(response, units);
         setHourlyConditions(response, units);
-        
+        city = response.address;
     })
     .catch(function(error) {
         console.log(error);
     })
 }
+
+searchButton.addEventListener('click', () => {
+    const searchInput = document.querySelector('input');
+    if (searchInput.value === '') {
+        return;
+    }
+    getData(searchInput.value);
+    searchInput.value = '';
+})
 
 getData();
